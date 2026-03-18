@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b4arx26lgn7tx"]
+
+[ext_resource type="Script" uid="uid://cwim32fqg83gd" path="res://scenes/laser_shot.gd" id="1_2ing1"]
+[ext_resource type="Texture2D" uid="uid://bjtsptpcynyep" path="res://resources/laser_shot.png" id="1_ubebs"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2ing1"]
+b = Vector2(0, 11)
+
+[node name="LaserShot" type="Area2D" unique_id=58118809]
+script = ExtResource("1_2ing1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=418803852]
+texture = ExtResource("1_ubebs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1705340883]
+position = Vector2(0, -6)
+shape = SubResource("SegmentShape2D_2ing1")

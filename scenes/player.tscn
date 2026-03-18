@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://betlis4rol8gj"]
+
+[ext_resource type="Texture2D" uid="uid://h33m1rqrrus8" path="res://resources/fighter_jet.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dvxygp3brmcxg" path="res://scenes/player.gd" id="1_g2els"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1399711198]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=948509154]
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1704990918]
+polygon = PackedVector2Array(3, 2, 13, 14, 19, 15, 19, 22, 3, 21, 0, 26, -3, 26, -6, 21, -21, 22, -22, 13, -16, 14, -6, 3, -1, -19)
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1573263778]
+position = Vector2(-1, -20)

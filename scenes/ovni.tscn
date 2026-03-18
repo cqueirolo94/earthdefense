@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dolhisn4nosjq"]
+
+[ext_resource type="Texture2D" uid="uid://bb1sp1lhtqkn5" path="res://resources/ovni.png" id="1_ed4fv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtsbc"]
+radius = 32.01562
+
+[node name="Ovni" type="StaticBody2D" unique_id=858930458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1485964371]
+shape = SubResource("CircleShape2D_xtsbc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2142518917]
+texture = ExtResource("1_ed4fv")

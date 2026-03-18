@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqxbyx3fj7ve8"]
+
+[ext_resource type="PackedScene" uid="uid://betlis4rol8gj" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dagj2so0p2m83" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dolhisn4nosjq" path="res://scenes/ovni.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://b4arx26lgn7tx" path="res://scenes/laser_shot.tscn" id="3_jyhfs"]
+
+[node name="Main" type="Node2D" unique_id=994654761]
+script = ExtResource("1_sugp2")
+
+[node name="Player" parent="." unique_id=1399711198 instance=ExtResource("1_o5qli")]
+position = Vector2(611, 661)
+LaserShot = ExtResource("3_jyhfs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1924053013]
+anchor_mode = 0
+
+[node name="Ovni" parent="." unique_id=858930458 instance=ExtResource("2_0wfyh")]
+position = Vector2(612, 39)
