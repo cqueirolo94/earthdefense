@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bljqofg1jj3q4"]
+
+[ext_resource type="Texture2D" uid="uid://syxi2muyv8qa" path="res://resources/space_bg.png" id="1_y0upk"]
+[ext_resource type="Texture2D" uid="uid://dj5ajccfxyphx" path="res://resources/space_bg_2.png" id="2_jougr"]
+
+[node name="Background" type="Node2D" unique_id=449055412]
+
+[node name="bg_1" type="Parallax2D" parent="." unique_id=2048400981]
+
+[node name="Sprite2D" type="Sprite2D" parent="bg_1" unique_id=974710356]
+texture = ExtResource("1_y0upk")
+centered = false
+
+[node name="bg_2" type="Parallax2D" parent="." unique_id=1134933002]
+repeat_size = Vector2(0, 768)
+autoscroll = Vector2(0, 70)
+
+[node name="Sprite2D" type="Sprite2D" parent="bg_2" unique_id=918620282]
+texture = ExtResource("2_jougr")
+centered = false

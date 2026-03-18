@@ -3,10 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://betlis4rol8gj" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dagj2so0p2m83" path="res://scenes/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dolhisn4nosjq" path="res://scenes/ovni.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bljqofg1jj3q4" path="res://scenes/background.tscn" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b4arx26lgn7tx" path="res://scenes/laser_shot.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cl5axpiucn43e" path="res://scenes/alien_flesh.tscn" id="5_tbgi4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=994654761]
 script = ExtResource("1_sugp2")
+
+[node name="Background" parent="." unique_id=449055412 instance=ExtResource("2_tefeu")]
 
 [node name="Player" parent="." unique_id=1399711198 instance=ExtResource("1_o5qli")]
 position = Vector2(611, 661)
@@ -17,3 +23,35 @@ anchor_mode = 0
 
 [node name="Ovni" parent="." unique_id=858930458 instance=ExtResource("2_0wfyh")]
 position = Vector2(612, 39)
+
+[node name="AlienFlesh" parent="." unique_id=236962138 instance=ExtResource("5_tbgi4")]
+position = Vector2(444, 93)
+
+[node name="Walls" type="Node2D" parent="." unique_id=1995114403]
+
+[node name="Wall_Left" type="StaticBody2D" parent="Walls" unique_id=709048151]
+position = Vector2(-1, 356)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall_Left" unique_id=617309920]
+shape = SubResource("WorldBoundaryShape2D_jyhfs")
+
+[node name="Wall_Right" type="StaticBody2D" parent="Walls" unique_id=1567594983]
+position = Vector2(1281, 353)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall_Right" unique_id=577365240]
+shape = SubResource("WorldBoundaryShape2D_jyhfs")
+
+[node name="Wall_Top" type="StaticBody2D" parent="Walls" unique_id=228458116]
+position = Vector2(634, -1)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall_Top" unique_id=1979024634]
+shape = SubResource("WorldBoundaryShape2D_jyhfs")
+
+[node name="Wall_Bottom" type="StaticBody2D" parent="Walls" unique_id=9777613]
+position = Vector2(610, 721)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall_Bottom" unique_id=462766241]
+shape = SubResource("WorldBoundaryShape2D_jyhfs")

@@ -10,7 +10,8 @@ script = ExtResource("1_g2els")
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1704990918]
-polygon = PackedVector2Array(3, 2, 13, 14, 19, 15, 19, 22, 3, 21, 0, 26, -3, 26, -6, 21, -21, 22, -22, 13, -16, 14, -6, 3, -1, -19)
+position = Vector2(0, -2)
+polygon = PackedVector2Array(3, 2, 13, 14, 20, 14, 19, 23, 3, 23, 1, 29, -4, 29, -6, 23, -22, 23, -23, 14, -16, 14, -6, 3, -1, -19)
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=1573263778]
 position = Vector2(-1, -20)

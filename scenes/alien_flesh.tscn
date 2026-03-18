@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cl5axpiucn43e"]
+
+[ext_resource type="Texture2D" uid="uid://4lhq1uvhmmmb" path="res://resources/alien_flesh.png" id="1_gaqxy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtsbc"]
+radius = 9.0
+
+[node name="AlienFlesh" type="StaticBody2D" unique_id=858930458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1485964371]
+shape = SubResource("CircleShape2D_xtsbc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2142518917]
+position = Vector2(2, 1)
+texture = ExtResource("1_gaqxy")
